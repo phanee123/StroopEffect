@@ -9,26 +9,33 @@ import { useNavigate } from "react-router-dom";
 const ColorPad = () => {
   const navigate = useNavigate();
   const [mountTime, setMountTimer] = useState(new Date().getTime());
-  const { setCurrentStep, currentStep, testNum, results, setResults, currentTest, setCurrentTest } =
-    useContext(ResultsContext);
+  const {
+    setCurrentStep,
+    currentStep,
+    testNum,
+    results,
+    setResults,
+    currentTest,
+    setCurrentTest,
+  } = useContext(ResultsContext);
   const clickSound = new Audio(sound);
 
   const clickHandler = (event) => {
     const currentTime = new Date().getTime();
+    const buttonClicked = event.target.innerHTML;
+    clickSound.play();
+    const updatedResult = {
+      systemInput: testNum[currentStep].label,
+      userInput: buttonClicked,
+      isTrue: testNum[currentStep].label === buttonClicked,
+      serialNum: currentStep + 1,
+      currentTest,
+      timeTookInSec: `${(currentTime - mountTime) / 1000} seconds`,
+    };
+    let newResults = [...results];
+    newResults.push(updatedResult);
+    setResults(newResults);
     if (currentStep < NUM_OF_COLORS_IN_GRID - 1) {
-      const buttonClicked = event.target.innerHTML;
-      clickSound.play();
-      const updatedResult = {
-        systemInput: testNum[currentStep].label,
-        userInput: buttonClicked,
-        isTrue: testNum[currentStep].label === buttonClicked,
-        serialNum: currentStep + 1,
-        currentTest,
-        timeTookInSec: `${(currentTime - mountTime) / 1000} seconds`,
-      };
-      let newResults = [...results];
-      newResults.push(updatedResult);
-      setResults(newResults);
       setCurrentStep((prev) => prev + 1);
       setMountTimer(currentTime);
     } else {
