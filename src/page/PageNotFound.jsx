@@ -1,4 +1,4 @@
-import Instruction from "../components/instruction/Instruction";
+import Instruction from "../components/new-instruction";
 import { useNavigate } from "react-router-dom";
 
 const PageNotFound = () => {

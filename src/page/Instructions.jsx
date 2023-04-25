@@ -5,7 +5,7 @@ import {
   INSTRUCTION_STEPS_TEST2,
   INSTRUCTION_STEPS_TEST3,
 } from "../constants/InstructionSteps";
-import Instruction from "../components/instruction/Instruction";
+import Instruction from "../components/new-instruction";
 import { ResultsContext } from "../context/Results";
 
 const Instructions = () => {
