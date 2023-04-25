@@ -1,0 +1,3 @@
+const NUM_OF_COLORS_IN_GRID = 50;
+
+export { NUM_OF_COLORS_IN_GRID };
