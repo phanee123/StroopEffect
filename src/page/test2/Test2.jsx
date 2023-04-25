@@ -1,14 +1,14 @@
 import ColorPad from "../color-pad";
-import ColorGrid1 from "../colorgrid1";
+import ColorGrid2 from "../colorgrid2";
 import styles from "./styles.module.css";
 
-const Test1 = () => {
+const Test2 = () => {
   return (
     <div className={styles.container}>
-      <ColorGrid1 />
+      <ColorGrid2 />
       <ColorPad />
     </div>
   );
 };
 
-export default Test1;
+export default Test2;

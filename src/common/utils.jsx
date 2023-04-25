@@ -8,7 +8,7 @@ const duplicateElements = (array, times) => {
 };
 
 function shuffleArray() {
-  const numTimeToShuffle = Math.round(NUM_OF_COLORS_IN_GRID / COLORS_ARRAY.length);
+  const numTimeToShuffle = Math.round(NUM_OF_COLORS_IN_GRID / COLORS_ARRAY.length) + 1;
   const array = duplicateElements(COLORS_ARRAY, numTimeToShuffle).filter(
     (value, index) => index < NUM_OF_COLORS_IN_GRID
   );

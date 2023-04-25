@@ -3,12 +3,12 @@ import { ResultsContext } from "../../context/Results";
 
 import styles from "./styles.module.css";
 
-const ColorGrid = () => {
+const ColorGrid1 = () => {
   const { currentStep, testNum } = useContext(ResultsContext);
   return (
     <div className={styles.container}>
       {testNum.map((color, index) => {
-        if (index === currentStep - 1) {
+        if (index === currentStep) {
           return (
             <p className={styles.cell} style={{ color: color.value, borderBottom: `1px solid black` }} key={index}>
               {color.label}
@@ -25,4 +25,4 @@ const ColorGrid = () => {
     </div>
   );
 };
-export default ColorGrid;
+export default ColorGrid1;

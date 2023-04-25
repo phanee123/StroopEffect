@@ -1,0 +1,27 @@
+.container {
+  padding: 1rem;
+  width: 100%;
+  height: 70%;
+  /* display: grid;
+  grid-template-columns: repeat(10, 100px);
+  justify-content: center;
+  align-items: center; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.train {
+  width: 72px;
+  height: 18px;
+  display: flex;
+  gap: 2px;
+  border: 1px solid #fff;
+  padding: 3px;
+}
+.cell {
+  width: 16px;
+  height: 12px;
+}
