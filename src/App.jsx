@@ -8,6 +8,7 @@ import ExitWithDownloadExcel from "./page/ExitWithDownloadExcel";
 import PageNotFound from "./page/PageNotFound";
 
 import "./App.css";
+import Ready from "./page/Ready";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Instructions />} />
             <Route path="/test1" element={<Test1 />} />
             <Route path="/test2" element={<Test2 />} />
+            <Route path="/ready" element={<Ready />} />
             <Route path="/exitWithExcel" element={<ExitWithDownloadExcel />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>

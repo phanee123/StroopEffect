@@ -16,10 +16,10 @@ const YELLOW_COLOR = {
   color: "#fff",
 };
 export const COLORS_ARRAY = [
-  { label: "RED", value: "red" },
-  { label: "GREEN", value: "green" },
-  { label: "BLUE", value: "blue" },
-  { label: "YELLOW", value: "#f59f00" },
+  { label: "YELLOW", value: "#f59f00", displayColor: "YELLOW" },
+  { label: "RED", value: "red", displayColor: "RED" },
+  { label: "GREEN", value: "green", displayColor: "GREEN" },
+  { label: "BLUE", value: "blue", displayColor: "BLUE" },
 ];
 
 export const getColor = {

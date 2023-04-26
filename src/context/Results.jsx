@@ -1,12 +1,13 @@
 import { createContext, useState } from "react";
-import { shuffleArray } from "../common/utils";
+
+import { NUM_OF_COLORS_IN_GRID } from "../constants/general";
 
 export const ResultsContext = createContext({
   results: [],
   setResults: () => {},
   currentStep: 0,
   setCurrentStep: () => {},
-  testNum: shuffleArray(),
+  testNum: [],
   setTestNum: () => {},
   currentTest: 1,
   setCurrentTest: () => {},
@@ -15,7 +16,7 @@ export const ResultsContext = createContext({
 export const ResultsProvider = ({ children }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [currentTest, setCurrentTest] = useState(1);
-  const [testNum, setTestNum] = useState(shuffleArray());
+  const [testNum, setTestNum] = useState();
   const [results, setResults] = useState([]);
 
   const value = { results, setResults, currentStep, setCurrentStep, testNum, setTestNum, currentTest, setCurrentTest };

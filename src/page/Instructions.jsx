@@ -26,9 +26,7 @@ const Instructions = () => {
   } = CURRENT_INSTRUCTIONS[currentStep];
 
   const handleNextClick =
-    stepIndex === CURRENT_INSTRUCTIONS.length
-      ? () => navigate(`/test${currentTest}`)
-      : () => setCurrentStep((prev) => prev + 1);
+    stepIndex === CURRENT_INSTRUCTIONS.length ? () => navigate(`/ready`) : () => setCurrentStep((prev) => prev + 1);
   const handleBackClick = () => setCurrentStep((prev) => prev - 1);
   return (
     <Instruction
