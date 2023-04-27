@@ -6,3 +6,12 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+@media (max-width: 767px) {
+  .container {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
