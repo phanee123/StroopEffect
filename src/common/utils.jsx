@@ -34,8 +34,12 @@ function generateRandomColorsWithDiffText(numberOfColors = NUM_OF_COLORS_IN_GRID
     finalResult.push({ label: data[i], value: data[i + 1], displayColor: data[i + 1] });
   }
   const newfinalResult = finalResult.map((colorSet) => {
-    if (colorSet.label === "#f59f00") {
-      return { label: "YELLOW", value: colorSet.value, displayColor: colorSet.value };
+    if (colorSet.label === "#f59f00" || colorSet.value === "#f59f00") {
+      return {
+        label: colorSet.label === "#f59f00" ? "YELLOW" : colorSet.label,
+        value: colorSet.value,
+        displayColor: colorSet.value === "#f59f00" ? "YELLOW" : colorSet.value,
+      };
     } else return colorSet;
   });
   return newfinalResult;

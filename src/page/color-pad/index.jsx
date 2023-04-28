@@ -23,7 +23,7 @@ const ColorPad = () => {
       isTrue: testNum[currentStep].displayColor === buttonClicked,
       serialNum: currentStep + 1,
       currentTest,
-      timeTookInSec: `${(currentTime - mountTime) / 1000} seconds`,
+      timeTookInSec: (currentTime - mountTime) / 1000,
     };
     let newResults = [...results];
     newResults.push(updatedResult);
