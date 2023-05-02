@@ -5,7 +5,7 @@ import {
   getRandomColorsWithMatchText,
   generateRandomColorsWithDiffText,
 } from "../common/utils";
-import readyAudio from "../assets/Ready";
+import readyAudio from "../assets/readysound.mp3";
 
 const Ready = () => {
   const navigate = useNavigate();
