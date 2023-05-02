@@ -4,6 +4,15 @@
   min-height: 90vh;
   border-radius: 12px;
   display: flex;
+
   justify-content: center;
   align-items: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  min-width: 6rem;
 }

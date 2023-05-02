@@ -6,6 +6,7 @@ import Test1 from "./page/test1/Test1";
 import Test2 from "./page/test2/Test2";
 import ExitWithDownloadExcel from "./page/ExitWithDownloadExcel";
 import PageNotFound from "./page/PageNotFound";
+import LastPage from "./page/LastPage";
 
 import "./App.css";
 import Ready from "./page/Ready";
@@ -22,6 +23,7 @@ function App() {
             <Route path="/ready" element={<Ready />} />
             <Route path="/exitWithExcel" element={<ExitWithDownloadExcel />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/lastactivity" element={<LastPage />} />
           </Routes>
         </ResultsProvider>
       </BrowserRouter>

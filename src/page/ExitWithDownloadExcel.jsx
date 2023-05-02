@@ -1,6 +1,30 @@
 import { CSVDownload, CSVLink } from "react-csv";
 import { useContext } from "react";
 import { ResultsContext } from "../context/Results";
+import { useNavigate } from "react-router-dom";
+/*css for button */
+
+const styles = {
+  lastpage: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "70vh",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  button: {
+    display: "block",
+    outline: "0",
+    border: "0",
+    padding: "8px 32px",
+    backgroundColor: "#6666ff",
+    color: "white",
+    borderRadius: "6px",
+    cursor: "pointer",
+    fontSize: "20px",
+    fontWeight: "600",
+  },
+};
 const headers = [
   { label: "Test Number", key: "currentTest" },
   { label: "SL Number in Current Test", key: "serialNum" },
@@ -12,19 +36,21 @@ const headers = [
 
 const getScore = (results, testNum) => {
   const filterResults = results.filter((item) => item.currentTest === testNum);
-  console.log({ filterResults });
   const filterFalseResults = filterResults.filter((item) => !item.isTrue);
 
   return {
     numOfFalse: filterFalseResults.length,
-    trueTotalTimeSum: filterResults.reduce((acc, curr) => {
-      let newSum = acc + curr.timeTookInSec;
-      return newSum;
-    }, 0),
+    trueTotalTimeSum: filterResults
+      .reduce((acc, curr) => {
+        let newSum = acc + curr.timeTookInSec;
+        return newSum;
+      }, 0)
+      .toFixed(2),
   };
 };
 const ExitWithDownloadExcel = () => {
   const { results } = useContext(ResultsContext);
+  const navigate = useNavigate();
 
   const csvReport = {
     data: results,
@@ -35,7 +61,7 @@ const ExitWithDownloadExcel = () => {
 
   //   TODO: Add correct message below
   return (
-    <div>
+    <div style={styles.lastpage}>
       <h2>Results</h2>
       <h3>False Count in Test1 - {getScore(results, 1).numOfFalse}</h3>
       <h3>Total Time in Test1 - {getScore(results, 1).trueTotalTimeSum}</h3>
@@ -43,8 +69,11 @@ const ExitWithDownloadExcel = () => {
       <h3>Total Time in Test2 - {getScore(results, 2).trueTotalTimeSum}</h3>
       <h3>False Count in Test3 - {getScore(results, 3).numOfFalse}</h3>
       <h3>Total Time in Test3 - {getScore(results, 3).trueTotalTimeSum}</h3>
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, iure.</h3>
-      <CSVLink {...csvReport}>Download me</CSVLink>;
+
+      <CSVLink {...csvReport}>Download me</CSVLink>
+      <button style={styles.button} onClick={() => navigate("/lastactivity")}>
+        End
+      </button>
     </div>
   );
 };

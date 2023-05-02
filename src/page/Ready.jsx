@@ -1,13 +1,20 @@
 import { useEffect, useContext } from "react";
 import { ResultsContext } from "../context/Results";
 import { useNavigate } from "react-router-dom";
-import { getRandomColorsWithMatchText, generateRandomColorsWithDiffText } from "../common/utils";
+import {
+  getRandomColorsWithMatchText,
+  generateRandomColorsWithDiffText,
+} from "../common/utils";
+import readyAudio from "../assets/Ready";
+
 const Ready = () => {
   const navigate = useNavigate();
+  const audio = new Audio(readyAudio);
   const { currentTest, setTestNum } = useContext(ResultsContext);
 
   useEffect(() => {
     setTimeout(() => {
+      audio.play();
       if (currentTest !== 3) {
         setTestNum(getRandomColorsWithMatchText());
         navigate(`/test${currentTest}`);
