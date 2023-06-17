@@ -23,21 +23,57 @@ const Instructions = () => {
     buttonLabel1 = "",
     content,
     buttonLabel2 = "",
+    voiceInstruction = "",
   } = CURRENT_INSTRUCTIONS[currentStep];
 
+  const audio = new Audio(voiceInstruction);
   const handleNextClick =
-    stepIndex === CURRENT_INSTRUCTIONS.length ? () => navigate(`/ready`) : () => setCurrentStep((prev) => prev + 1);
+    stepIndex === CURRENT_INSTRUCTIONS.length
+      ? () => navigate(`/ready`)
+      : () => setCurrentStep((prev) => prev + 1);
   const handleBackClick = () => setCurrentStep((prev) => prev - 1);
+
+  const audioPlayPause = () => {
+    if (voiceInstruction) {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  };
+
   return (
     <Instruction
-      handleNextClick={handleNextClick}
+      handleNextClick={() => {
+        handleNextClick();
+        audio.pause();
+      }}
       label1={buttonLabel1}
       label2={buttonLabel2}
-      handleBackClick={handleBackClick}
+      handleBackClick={() => {
+        handleBackClick();
+        audio.pause();
+      }}
+      voiceInstruction={voiceInstruction}
+      handleAudio={audioPlayPause}
     >
       {content}
     </Instruction>
   );
 };
+
+// these are the lines before adding the audio instructions handling function
+//   return (
+//     <Instruction
+//       handleNextClick={handleNextClick}
+//       label1={buttonLabel1}
+//       label2={buttonLabel2}
+//       handleBackClick={handleBackClick}
+//     >
+//       {content}
+//     </Instruction>
+//   );
+// };
 
 export default Instructions;

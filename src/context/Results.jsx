@@ -19,6 +19,17 @@ export const ResultsProvider = ({ children }) => {
   const [testNum, setTestNum] = useState();
   const [results, setResults] = useState([]);
 
-  const value = { results, setResults, currentStep, setCurrentStep, testNum, setTestNum, currentTest, setCurrentTest };
-  return <ResultsContext.Provider value={value}>{children}</ResultsContext.Provider>;
+  const value = {
+    results,
+    setResults,
+    currentStep,
+    setCurrentStep,
+    testNum,
+    setTestNum,
+    currentTest,
+    setCurrentTest,
+  };
+  return (
+    <ResultsContext.Provider value={value}>{children}</ResultsContext.Provider>
+  );
 };

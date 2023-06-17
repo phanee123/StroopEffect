@@ -24,7 +24,9 @@ const LastPage = () => {
   return (
     <div style={lastPageStyles.container}>
       <h4>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, quas!
+        You will have to present your results as per the table given and discuss
+        the results. conclusions and practical application should also be
+        written in your record book as per the format given below
       </h4>
       <table>
         <thead>
@@ -44,6 +46,10 @@ const LastPage = () => {
           <tr>
             <td></td>
             <td></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
           </tr>
         </tbody>
       </table>

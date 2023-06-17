@@ -13,8 +13,8 @@ const Ready = () => {
   const { currentTest, setTestNum } = useContext(ResultsContext);
 
   useEffect(() => {
+    audio.play();
     setTimeout(() => {
-      audio.play();
       if (currentTest !== 3) {
         setTestNum(getRandomColorsWithMatchText());
         navigate(`/test${currentTest}`);
