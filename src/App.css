@@ -4,7 +4,6 @@
   min-height: 90vh;
   border-radius: 12px;
   display: flex;
-
   justify-content: center;
   align-items: center;
 }
@@ -15,4 +14,10 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
   min-width: 6rem;
+}
+@media (max-width: 426px) {
+  .main-container {
+    min-height: 96vh;
+    margin: 1rem 0;
+  }
 }

@@ -1,6 +1,6 @@
 .card {
   width: 50vw;
-  height: 70vh;
+  min-height: 70vh;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -70,7 +70,8 @@
 @media (max-width: 426px) {
   .card {
     width: 90vw;
-    height: 80vh;
+    min-height: 70vh;
+    padding: 1rem 0;
   }
   .buttonContainer {
     flex-direction: column;
@@ -78,6 +79,12 @@
     align-items: center; */
   }
   .buttonContainer > * {
-    width: 100%;
+    width: 60%;
+  }
+  .button,
+  .buttonAudio,
+  .buttonBack {
+    font-size: 16px;
+    padding: 8px 24px;
   }
 }
