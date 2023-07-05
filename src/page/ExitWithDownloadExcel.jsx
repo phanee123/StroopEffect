@@ -70,13 +70,21 @@ const ExitWithDownloadExcel = () => {
       <p>Total Time in Test1 - {getScore(results, 1).trueTotalTimeSum}</p>
       <p>False Count in Test2 - {getScore(results, 2).numOfFalse}</p>
       <p>Total Time in Test2 - {getScore(results, 2).trueTotalTimeSum}</p>
+      <p>False Count in Test3 - {getScore(results, 3).numOfFalse}</p>
       <p>Total Time in Test3 - {getScore(results, 3).trueTotalTimeSum}</p>
-      <h3>Click on the link below to know your detailed responses.</h3>
-
+      <h3>Click on the link below to know the details of your responses</h3>
       <CSVLink {...csvReport}>Download me</CSVLink>
       <button style={styles.button} onClick={() => navigate("/lastactivity")}>
         Next
       </button>
+      <p>
+        <u>
+          <b>
+            *Note that in case you/subject are color blind then the result will
+            be inaccurate.
+          </b>
+        </u>
+      </p>
     </div>
   );
 };

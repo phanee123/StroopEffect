@@ -1,6 +1,13 @@
 // TODO: Add clear Steps
-import sound1 from "../assets/instructionaudio1.mp3";
-import sound2 from "../assets/instructionaudio2.mp3";
+
+import sound3 from "../assets/generalconditions.mp3";
+import sound4 from "../assets/instructionspart1.mp3";
+import sound5 from "../assets/condtion1part2.mp3";
+import sound6 from "../assets/condition2part1.mp3";
+import sound7 from "../assets/condition2part2.mp3";
+import sound8 from "../assets/condition3part1.mp3";
+import sound9 from "../assets/condition3part2.mp3";
+import sound10 from "../assets/precautionsstroop.mp3";
 
 const INSTRUCTION_STEPS_TEST1 = [
   {
@@ -16,7 +23,7 @@ const INSTRUCTION_STEPS_TEST1 = [
 .
           </p>
           <p>
-          The Stroop Effect Experiment is a classic psychological study that examines the interference caused by conflicting information in our cognitive processing. John Ridley Stroop was the first person to do the Stroop test (1935). In this experiment, participants are presented with a list of color words printed in incongruent ink colors. For example, the word "RED" may be printed in blue ink. The participants are then asked to name the ink color while ignoring the word itself. The Stroop Effect occurs when the participants experience a delay or difficulty in correctly identifying the ink color due to the interference caused by reading the word. This experiment highlights the automaticity of reading and the challenge it poses in overcoming interference when processing conflicting information.
+          The Stroop Effect Experiment is a classic psychological study that examines the interference caused by conflicting information in our cognitive processing. John Ridley Stroop was the first person to do the Stroop test (1935). In this experiment, participants are presented with a list of color words printed in incongruent ink colors. For example, the word <b>RED</b> may be printed in blue ink. The participants are then asked to name the ink color while ignoring the word itself. The Stroop Effect occurs when the participants experience a delay or difficulty in correctly identifying the ink color due to the interference caused by reading the word. This experiment highlights the automaticity of reading and the challenge it poses in overcoming interference when processing conflicting information.
           </p>`,
 
     buttonLabel2: "Next",
@@ -24,16 +31,20 @@ const INSTRUCTION_STEPS_TEST1 = [
 
   {
     stepIndex: 2,
-    content: `
-          <h2>Conditions to be followed while conducting the experiment / Precautions!</h2>
-          <p>The student or the subject will have to sit 1 ft away from the screen.</p>
-          <p>The subject will have to sit comfortably in a quiet and well-ventilated room.</p>
-          <p>If the subject is using phone/ tab to conduct the experiment then it is mandatory for him/her to put the phone on
-           Do Not Disturb (DND) mode in order to avoid any disruptions.</p>
-          <p>Please keep a note book and a pen while you are conducting the experiment 
-           because you will have to note down some information.</p>`,
+    content: `<h3>Conditions to be followed while conducting the experiment / Precautions! / ప్రయోగం చేసేటప్పుడు పాటించాల్సిన కండిషన్స్ / జాగ్రత్తలు!</h3>
+    <p>
+    The student or the subject will have to sit 1 ft away from the screen. / మీరు నిశ్శబ్దంగా మరియు బాగా వెంటిలేషన్ ఉన్న గదిలో సౌకర్యవంతంగా కూర్చోవాలి. 
+    </p>
+    <p>The subject will have to sit comfortably in a quiet and well-ventilated room./ మీ స్క్రీన్ నుండి 1 అడుగుల దూరంలో కూర్చోవాలి.
+    </p>
+    <p>If the subject is using phone/ tab to conduct the experiment,it is mandatory for him/her 
+        to put the phone on Do Not Disturb (DND) mode in order to avoid any disruptions./ప్రయోగాన్ని నిర్వహించడానికి మీరు ఫోన్/ట్యాబ్‌ని ఉపయోగిస్తుంటే, ఏదైనా అంతరాయాలను నివారించడానికి, ఫోన్‌ని డోంట్ డిస్టర్బ్ (DND) మోడ్‌లో ఉంచడం తప్పనిసరి.
+    </p>
+    <p>Please keep a notebook and a pen while you are conducting the experiment because you may have to note down some information./ మీరు ప్రయోగం చేస్తున్నప్పుడు కావాల్సిన సమాచారాన్ని నోట్ చేసుకోవడానికి  ఒక పుస్తకం మరియు పెన్ను మీ దగ్గర ఉంచుకోండి.</p>
+    `,
     buttonLabel1: "Previous",
     buttonLabel2: "Next",
+    voiceInstruction: sound10,
   },
   {
     stepIndex: 3,
@@ -43,7 +54,7 @@ const INSTRUCTION_STEPS_TEST1 = [
           <p>1.Introduction</p>
           <p>2.Materials required</p>
           <p>3.Purpose</p>
-          <p>4.Particulars of the subject/student [Name,Enrollment No,Age,Date]</p>
+          <p>4.Particulars of the subject/student [Name, Enrollment No, Age, Date]</p>
           <p>5.Procedure for conduction</p>
           <p>6.Results</p>
           <p>7.Discussions</p>
@@ -56,12 +67,13 @@ const INSTRUCTION_STEPS_TEST1 = [
   {
     stepIndex: 4,
     content: `
-      <p>Please note that this experiment has 3 conditions. Be alert as each condition has specific instructions. / ఈ ప్రయోగానికి 3 కండిషన్స్ ఉన్నాయని దయచేసి గమనించండి. ప్రతి షరతుకు నిర్దిష్ట సూచనలు ఉన్నందున అప్రమత్తంగా ఉండండి.</p>
-      <p>After clicking on the End instructions button below, you will find ‘Ready’ word as a signal to begin the experiment./ END Instructions బటన్‌పై క్లిక్ చేసిన తర్వాత, మీరు ప్రయోగాన్ని ప్రారంభించడానికి సంకేతంగా ‘రెడీ’ (READY) పదం కనిపిస్తుంది.</p>
+      <p>Please note that this experiment has 3 conditions. Be alert as each condition has specific instructions. / ఈ ప్రయోగానికి 3 కండిషన్స్ ఉన్నాయని దయచేసి గమనించండి. ప్రతి కండిషన్కు నిర్దిష్ట సూచనలు ఉన్నందున అప్రమత్తంగా ఉండండి.</p>
+      <p>After clicking on the <b>End instructions</b> button below, you will find <b>Ready</b> word as a signal to begin the experiment./ <b>END Instruction</b>s బటన్‌పై క్లిక్ చేసిన తర్వాత, మీరు ప్రయోగాన్ని ప్రారంభించడానికి సంకేతంగా <b>READY</b> పదం కనిపిస్తుంది.</p>
     
     `,
     buttonLabel1: "Previous",
     buttonLabel2: "Next",
+    voiceInstruction: sound3,
   },
   {
     stepIndex: 5,
@@ -72,14 +84,14 @@ const INSTRUCTION_STEPS_TEST1 = [
       <h3>Condition 1 - Color words</h3>
       <p>You will find few Color words being displayed on the screen. At the bottom of your screen, 
         you will find buttons/options with 4 different colors along with text/ మీకు స్క్రీన్ పైన రంగులలో పదాలు  మరియు  స్క్రీన్ దిగువన 4 విభిన్న రంగులలో పదాల బటన్‌లు/ఆప్షన్‌లు కనిపిస్తాయి.</p>
-      <p>You will find each color word being underlined one after the other, beginning from the 1st word / మీరు బటన్/ఆప్షన్‌పై  క్లిక్ చేసిన ప్రతిసారి రంగుల పదం క్రింద అండర్లైన్ గమనిస్తారు</p>
+      <p>You will find each color word being underlined one after the other, beginning from the 1st word / 1వ పదం నుండి ప్రారంభించి, ప్రతి రంగు పదాన్ని ఒకదాని తర్వాత ఒకటి అండర్‌లైన చేయబడుతుంది.</p>
       <p>You will have to respond by clicking on the appropriate button/option below that matches with the word that is underlined. 
         Example if the word underlined is yellow you will have to click on the yellow button/option below / అండర్‌లైన్ చేయబడిన పదానికి సరిపోయేలా స్పందించడానికి క్రింద తగిన బటన్/ఆప్షన్‌పై క్లిక్ చేయండి. ఉదాహరణకి అండర్‌లైన్ చేయబడిన పదం పసుపు రంగులో ఉంటే, మీరు పసుపు బటన్/ఆప్షన్‌పై క్లిక్ చేయాలి..</p>
       
     `,
     buttonLabel1: "Previous",
     buttonLabel2: "Next",
-    voiceInstruction: sound2,
+    voiceInstruction: sound4,
   },
 
   {
@@ -94,11 +106,11 @@ const INSTRUCTION_STEPS_TEST1 = [
     `,
     buttonLabel1: "Previous",
     buttonLabel2: "Next",
-    voiceInstruction: sound2,
+    voiceInstruction: sound5,
   },
   {
     stepIndex: 7,
-    content: `<p>Condition 1 of the experiment will begin after clicking on the <b>End instructions</b> button below / <b>End instructions</b>బటన్‌పై క్లిక్ చేసిన తర్వాత ప్రయోగం యొక్క కండిషన్-1 ప్రారంభమవుతుంది.</p>`,
+    content: `<p>Condition 1 of the experiment will begin after clicking on the <b>End instructions</b> button below / <b>End instructions</b> బటన్‌పై క్లిక్ చేసిన తర్వాత ప్రయోగం యొక్క కండిషన్-1 ప్రారంభమవుతుంది.</p>`,
     buttonLabel1: "Previous",
     buttonLabel2: "End Instructions",
   },
@@ -116,7 +128,7 @@ const INSTRUCTION_STEPS_TEST2 = [
       If the color strip highlighted is in red ink then you will have to click on the red button/option below / హైలైట్ చేయబడిన కలర్ స్ట్రిప్‌తో సరిపోయే  క్రింది బటన్/ఆప్షన్‌పై క్లిక్ చేయండి. ఉదాహరణకి. హైలైట్ చేయబడిన కలర్ స్ట్రిప్ ఎరుపు సిరాలో (Ink) ఉన్నట్లయితే, మీరు దిగువ ఎరుపు బటన్/ఆప్షన్‌పై క్లిక్ చేయాలి.</p>  
     `,
     buttonLabel2: "Next",
-    voiceInstruction: sound2,
+    voiceInstruction: sound6,
   },
   {
     stepIndex: 2,
@@ -128,8 +140,8 @@ const INSTRUCTION_STEPS_TEST2 = [
        తదుపరి కండిషన్ కి కొనసాగుతారు.</p>
     `,
     buttonLabel1: "Previous",
-    buttonLabel2: "End Instructions",
-    voiceInstruction: sound2,
+    buttonLabel2: "Next",
+    voiceInstruction: sound7,
   },
   {
     stepIndex: 3,
@@ -152,7 +164,7 @@ const INSTRUCTION_STEPS_TEST3 = [
       
       `,
     buttonLabel2: "Next",
-    voiceInstruction: sound2,
+    voiceInstruction: sound8,
   },
   {
     stepIndex: 2,
@@ -164,11 +176,11 @@ const INSTRUCTION_STEPS_TEST3 = [
     `,
     buttonLabel2: "Next",
     buttonLabel1: "Previous",
-    voiceInstruction: sound2,
+    voiceInstruction: sound9,
   },
   {
     stepIndex: 3,
-    content: `<p>Condition-3 of the experiment will start after you click <b>End instructions.</b> / <b>End instructions</b> బటన్‌పై క్లిక్ చేసిన తర్వాత ప్రయోగం యొక్క కండిషన్-3 ప్రారంభమవుతుంది</p>`,
+    content: `<p>Condition-3 of the experiment will begin after you click <b>End instructions</b> button below. / <b>End instructions</b> బటన్‌పై క్లిక్ చేసిన తర్వాత ప్రయోగం యొక్క కండిషన్-3 ప్రారంభమవుతుంది</p>`,
     buttonLabel1: "Previous",
     buttonLabel2: "End Instructions",
   },
